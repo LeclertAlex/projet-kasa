@@ -5,6 +5,7 @@ import Header from './composant/Header'; // Header commun à toutes les pages
 import Footer from './composant/Footer'; // Footer commun à toutes les pages
 import Appartements from './composant/Appart'; // Liste des appartements (page d'accueil)
 import AppartementDetail from './composant/AppartementDetail'; // Page de détail pour chaque appartement
+import About from './composant/About';  // Importation du composant About
 import './App.css'; // Fichier CSS pour les styles
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           
           {/* Page de détail d'un appartement, accessible via un ID dynamique */}
           <Route path="/appartement/:id" element={<AppartementDetail />} />
+
+          <Route path="/about" element={<About />} />  
         </Routes>
 
         <Footer /> {/* Le Footer est affiché sur toutes les pages */}
