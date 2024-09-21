@@ -1,0 +1,142 @@
+[
+  {
+    "id": "c67ab8a7",
+    "title": "Appartement cosy",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+    "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
+    "location": "Ile de France - Paris 17e"
+  },
+  {
+    "id": "b9123946",
+    "title": "Magnifique appartement proche Canal Saint Martin",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+    "description": "Profitez du charme de la vie parisienne dans un magnifique appartement.",
+    "location": "Ile de France - Paris 10e"
+  },
+  {
+    "id": "46d188c5",
+    "title": "Studio de charme - Buttes Chaumont",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-1.jpg",
+    "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé.",
+    "location": "Ile de France - Paris 20e"
+  },
+  {
+    "id": "7af00cd6",
+    "title": "Nid douillet au coeur du 11ème",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-1.jpg",
+    "description": "Venez découvrir Paris en séjournant dans ce nid douillet au coeur du 11ème.",
+    "location": "Ile de France - Paris 11e"
+  },
+  {
+    "id": "0979876d",
+    "title": "Appartement de Standing - 10e",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-4-1.jpg",
+    "description": "Ce loft entièrement rénové, et équipé de meubles de luxe saura vous séduire.",
+    "location": "Ile de France - Paris 10e"
+  },
+  {
+    "id": "f72a452f",
+    "title": "Studio d'artiste",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-5-1.jpg",
+    "description": "Venez vous imprégner de la culture parisienne dans cet ancien studio d'artiste décoré avec goût.",
+    "location": "Ile de France - Paris 18e"
+  },
+  {
+    "id": "b4c67936",
+    "title": "Cheap - Studio 18ème",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-1.jpg",
+    "description": "Ce studio entièrement fonctionnel sera votre parfait pied à terre pour toutes vos excursions parisiennes.",
+    "location": "Ile de France - Paris 18e"
+  },
+  {
+    "id": "bc6f7112",
+    "title": "Superbe appartement proche Tour Eiffel",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-1.jpg",
+    "description": "Ce superbe appartement vous surprendra par son charme et sa proximité des plus belles attractions de Paris.",
+    "location": "Ile de France - Paris 6e"
+  },
+  {
+    "id": "cb2f9222",
+    "title": "Suite familiale",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-1.jpg",
+    "description": "En famille ou entre amis, venez découvrir la ville de l'amour dans un appartement de goût.",
+    "location": "Ile de France - Paris 14e"
+  },
+  {
+    "id": "d60ca600",
+    "title": "Appartement moderne sur parc",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-1.jpg",
+    "description": "Avec vue sur un parc résidentiel, cet appartement est également idéalement situé au coeur du 11ème arrondissement.",
+    "location": "Ile de France - Paris 11e"
+  },
+  {
+    "id": "2cf259e1",
+    "title": "Charmant Studio Marais",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-1.jpg",
+    "description": "Situé en plein coeur du Marais, notre studio est idéal pour les touristes en quête de découverte.",
+    "location": "Ile de France - Paris 11e"
+  },
+  {
+    "id": "5323c29b",
+    "title": "Studio fonctionnel République",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-11-3.jpg",
+    "description": "Idéalement situé à 2 pas de la place de la République, ce studio est parfait pour découvrir Paris.",
+    "location": "Ile de France - Paris 3e"
+  },
+  {
+    "id": "af6d2d48",
+    "title": "Bungalow dans la forêt",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-12-1.jpg",
+    "description": "Quittez Paris pour vous mettre au vert et découvrir la forêt d'Ecouen directement depuis la fenêtre de votre bungalow.",
+    "location": "Ile de France - Ecouen"
+  },
+  {
+    "id": "7cbb378e",
+    "title": "Grande Maison proche banlieue",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-13-2.jpg",
+    "description": "Cette maison est l'endroit idéal pour se regrouper et fêter un anniversaire entre amis tout en restant proche de Paris.",
+    "location": "Ile de France - Arnouville"
+  },
+  {
+    "id": "ba55a0cc",
+    "title": "Maison T5 - Le Vésinet",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-1.jpg",
+    "description": "Maison T5 idéale pour grands groupes à 45 minutes de Paris Saint-Lazare.",
+    "location": "Ile de France - Arnouville"
+  },
+  {
+    "id": "1e181317",
+    "title": "Loft de Luxe à la Défense",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-1.jpg",
+    "description": "Notre loft est l'endroit idéal pour vos séjours d'affaires à La Défense.",
+    "location": "Ile de France - La Défense"
+  },
+  {
+    "id": "1e180563",
+    "title": "Charmant apt aux portes de Paris",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg",
+    "description": "Ce charmant appartement offre des prestations de luxe, aux portes de Paris.",
+    "location": "Ile de France - Levallois"
+  },
+  {
+    "id": "2139a317",
+    "title": "Cheap - Chambre Paris 20",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-17-1.jpg",
+    "description": "Cette chambre dispose de toutes les facilités nécessaires. Proche métro et commerces.",
+    "location": "Ile de France - Paris 20e"
+  },
+  {
+    "id": "6ff132c6",
+    "title": "Charmant studio",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
+    "description": "Ce studio décoré avec goût sera votre nid douillet après une longue journée passée à découvrir Paris.",
+    "location": "Ile de France - Paris 13e"
+  },
+  {
+    "id": "cb02d69b",
+    "title": "Magnifique appartement Rivoli",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-19-1.jpg",
+    "description": "Au coeur du quartier historique du Marais, cet appartement est idéal pour un couple à la découverte de Paris.",
+    "location": "Ile de France - Paris 13e"
+  }
+]

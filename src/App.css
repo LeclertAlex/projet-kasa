@@ -1,38 +1,222 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.footer {
+  background-color: #333;
   color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  height: 169px;
+  bottom: 0;
+}
+.footer-logo {
+  width: 122px; /* Ajuste la taille du logo si nécessaire */
+  margin-top: 4%; /* Espace entre le logo et le texte */
+  margin-bottom: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header styles */
+.header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .logo img {
+  height: 50px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+/* COMMENCEMNT APPARTEMENT*/
+/* Appartements (cartes) styles */
+.cartes-section {
+  padding: 20px;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+
+.cartes-container {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(337px, 1fr));
+    gap: 10px;
+    max-width: 1240px;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.carte {
+  width: 100%; /* Faire en sorte que chaque carte prenne toute la largeur de sa cellule */
+  position: relative;
+  background-color: transparent; /* Pas de couleur de fond */
+}
+
+.carte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Carte avec image manquante */
+.carte img.missing {
+  display: none; /* Cacher l'image si elle est manquante */
+}
+
+.placeholder {
+  background-color: transparent; /* Supprimer le fond rouge */
+  display: none; /* Cacher le placeholder lorsqu'une image est présente */
+}
+
+/* Style pour le titre dans les cartes */
+.carte h3,
+.appartement-info h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  line-height: 142%;
+}
+/* FIN APPARTEMENT*/
+/* Conteneur principal pour la page de détails */
+.appartement-detail {
+  padding: 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+/* Conteneur pour l'image de l'appartement */
+.appartement-image {
+  width: 100%;
+  max-width: 1239px;
+  margin-bottom: 20px; /* Ajoute de l'espace en dessous de l'image */
+}
+
+.appartement-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 415px;
+  object-fit: cover; /* Maintient le ratio de l'image */
+}
+
+/* Conteneur pour regrouper le titre, l'adresse et l'hôte */
+.appartement-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.appartement-info {
+  flex: 2;
+}
+
+/* Titre de l'appartement */
+.appartement-title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #FF6060;
+  margin: 0;
+  text-align: left;
+  line-height: 142.6%;
+}
+
+/* Adresse de l'appartement */
+.appartement-location {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  margin-top: 5px;
+  text-align: left;
+  line-height: 142.6%;
+}
+
+/* Profil de l'hôte */
+.appartement-host {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.host-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.host-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+}
+
+/* Position absolue pour les étoiles sous le profil */
+.appartement-rating {
+  position: absolute;
+  bottom: 390px;
+}
+
+.appartement-rating {
+  font-size: 20px;
+  color: #FF6060;
+}
+
+/* Conteneur pour les menus déroulants Description et Équipements */
+.appartement-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dropdown button {
+  width: 582px;
+  height: 52px;
+  background-color: #FF6060;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 562px;
 }
