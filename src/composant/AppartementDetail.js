@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import appartementsData from '../data/appartements.json';
+import appartementsData from '../data/appartements.json'; // Données des appartements
+import equipmentsList from '../data/equipments'; // Liste des équipements
+import Slideshow from './Slideshow'; // Slideshow des images
 import '../App.css';
 
 const AppartementDetail = () => {
@@ -14,44 +16,49 @@ const AppartementDetail = () => {
     return <p>Appartement non trouvé</p>;
   }
 
-  // Définir l'hôte par défaut
-  const defaultHost = {
-    name: "John Doe",
-    picture: "https://via.placeholder.com/64", // URL d'une image par défaut (W64 H64)
+  const generateTags = (title, location) => {
+    const titleWords = title.split(' ');
+    const firstTag = titleWords[0];
+    const secondTag = titleWords.length > 1 ? titleWords[1] : '';
+    const locationWords = location.split(' ');
+    const thirdTag = locationWords[locationWords.length - 1];
+
+    return [firstTag, secondTag, thirdTag];
   };
+
+  const tags = generateTags(appartement.title, appartement.location);
 
   return (
     <div className="appartement-detail">
-      {/* Conteneur pour l'image */}
-      <div className="appartement-image">
-        <img src={appartement.cover} alt={appartement.title} />
-      </div>
+      <Slideshow images={appartement.pictures} />
 
-      {/* Conteneur pour regrouper le titre, l'adresse et l'hôte sous l'image */}
       <div className="appartement-info-container">
         <div className="appartement-info">
           <h1 className="appartement-title">{appartement.title}</h1>
           <p className="appartement-location">{appartement.location}</p>
+
+          <div className="appartement-tags">
+            {tags.map((tag, index) => (
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
         </div>
 
-        {/* Hôte avec le nom, l'image, et les étoiles sous l'image en position absolue */}
         <div className="appartement-host">
           <div className="host-profile">
-            <p className="host-name">{defaultHost.name}</p> {/* Nom avant l'image */}
+            <p className="host-name">John Doe</p>
             <img
-              src={defaultHost.picture}
-              alt={`Profil de l'hôte ${defaultHost.name}`}
+              src="https://via.placeholder.com/64"
+              alt="Profil de l'hôte"
               className="profile-picture"
             />
           </div>
-          {/* Étoiles de notation en position absolue sous le profil */}
           <div className="appartement-rating">
             <span>{'⭐'.repeat(5)}</span>
           </div>
         </div>
       </div>
 
-      {/* Menus déroulants pour la description et les équipements */}
       <div className="appartement-buttons">
         <div className="dropdown">
           <button onClick={() => setShowDescription(!showDescription)}>
@@ -63,6 +70,7 @@ const AppartementDetail = () => {
             </div>
           )}
         </div>
+
         <div className="dropdown">
           <button onClick={() => setShowEquipments(!showEquipments)}>
             Équipements <span>{showEquipments ? "▲" : "▼"}</span>
@@ -70,7 +78,7 @@ const AppartementDetail = () => {
           {showEquipments && (
             <div className="dropdown-content">
               <ul>
-                {appartement.equipments && appartement.equipments.map((equipment, index) => (
+                {equipmentsList.map((equipment, index) => (
                   <li key={index}>{equipment}</li>
                 ))}
               </ul>

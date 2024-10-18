@@ -1,30 +1,32 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Remplace Switch par Routes
-import Header from './composant/Header'; // Header commun à toutes les pages
-import Footer from './composant/Footer'; // Footer commun à toutes les pages
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
+import Header from './composant/Header'; // Header commun
+import Footer from './composant/Footer'; // Footer commun
 import Appartements from './composant/Appart'; // Liste des appartements (page d'accueil)
-import AppartementDetail from './composant/AppartementDetail'; // Page de détail pour chaque appartement
-import About from './composant/About';  // Importation du composant About
+import AppartementDetail from './composant/AppartementDetail'; // Détail d'un appartement
+import About from './composant/About'; // Page "About"
+import Erreur from './composant/Erreur'; // Page d'erreur
 import './App.css'; // Fichier CSS pour les styles
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header /> {/* Le Header est affiché sur toutes les pages */}
-        
+        <Header /> {/* Le header s'affiche sur toutes les pages */}
         <Routes>
-          {/* Page d'accueil affichant la liste des appartements */}
+          {/* Route pour la page d'accueil */}
           <Route path="/" element={<Appartements />} />
-          
-          {/* Page de détail d'un appartement, accessible via un ID dynamique */}
+
+          {/* Route pour la page de détail de l'appartement */}
           <Route path="/appartement/:id" element={<AppartementDetail />} />
 
-          <Route path="/about" element={<About />} />  
-        </Routes>
+          {/* Route pour la page "About" */}
+          <Route path="/about" element={<About />} />
 
-        <Footer /> {/* Le Footer est affiché sur toutes les pages */}
+          {/* Route pour afficher une page d'erreur */}
+          <Route path="*" element={<Erreur />} />
+        </Routes>
+        <Footer /> {/* Le footer s'affiche sur toutes les pages */}
       </div>
     </Router>
   );

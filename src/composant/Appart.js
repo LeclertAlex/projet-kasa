@@ -7,7 +7,9 @@ import '../App.css';
 const Appartements = () => {
   return (
     <div className="appart-page">
-      
+      {/* Texte ajouté */}
+      <h1 className="slogan">Chez vous, partout et ailleurs</h1>
+
       {/* Grand carré avec l'image */}
       <div className="appart-image">
         <img src={ericImage} alt="Eric Muhr" />
@@ -36,7 +38,6 @@ const Appartements = () => {
         <div className="square"></div>
         <div className="square"></div>
       </div>
-      
     </div>
   );
 };
