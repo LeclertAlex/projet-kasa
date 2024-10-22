@@ -1,0 +1,83 @@
+.collapse {
+    margin-bottom: 5px; /* Espacement entre les collapses */
+  }
+ 
+  .detail-button {
+    background-color: #FF6060; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px; /* Espacement intérieur */
+    width: 582px; /* Largeur du bouton */
+    text-align: left; /* Alignement du texte à gauche */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur pointer sur hover */
+    display: flex; /* Flexbox pour l'alignement */
+    justify-content: space-between; /* Espace entre le texte et l'icône */
+    align-items: center; /* Aligne verticalement les éléments */
+    margin: 5px 0; /* Réduit l'espacement vertical entre les boutons */
+
+
+    @media (max-width: 768px) {
+        width: 335px;
+    }
+  }
+ 
+  /* Style de la flèche */
+  .arrow {
+    display: inline-block; /* Nécessaire pour l'animation */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid white; /* Flèche vers le haut */
+    transition: transform 0.3s ease; /* Animation pour la transformation */
+  }
+ 
+  /* Flèche ouverte : pointe vers le bas */
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+ 
+  /* Style du contenu du collapse */
+  .collapse-content {
+    padding: 10px; /* Espacement intérieur */
+    background-color: #FFFFFF; /* Couleur de fond du contenu */
+    border-radius: 5px; /* Bords arrondis */
+    transition: max-height 0.3s ease-in-out; /* Transition pour l'ouverture/fermeture */
+  }
+ 
+  /* Styles pour la section des boutons (remplacée par Collapse) */
+  .appartement-buttons {
+    display: flex; /* Flexbox pour l'alignement */
+    justify-content: space-between; /* Espace entre les collapses */
+    margin-top: 10px; /* Ajusté pour réduire l'espacement */
+    margin-bottom: 20%; /* Ajusté pour réduire l'espacement */
+
+
+    @media (max-width: 768px) {
+        margin-bottom: 70%;
+    }
+  }
+ 
+  /* S'assurer que le contenu des collapses est bien espacé */
+  ul {
+    padding: 0; /* Pas de padding pour la liste */
+    margin: 0; /* Pas de marges pour la liste */
+    list-style-type: none; /* Pas de puces */
+  }
+
+
+  .about-button {
+    background-color: #FF6060; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 20px; /* Espacement intérieur */
+    width: 100%; /* Largeur du bouton */
+    text-align: left; /* Alignement du texte à gauche */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur pointer sur hover */
+    display: flex; /* Flexbox pour l'alignement */
+    justify-content: space-between; /* Espace entre le texte et l'icône */
+    align-items: center; /* Aligne verticalement les éléments */
+    margin: 20px 0; /* Espacement vertical */
+  }

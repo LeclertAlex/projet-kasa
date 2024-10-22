@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import appartementsData from '../data/appartements.json'; // Données des appartements
 import equipmentsList from '../data/equipments'; // Liste des équipements
 import Slideshow from './Slideshow'; // Slideshow des images
+import Collapse from './Collapse'; // Import du composant Collapse
 import '../App.css';
 
 const AppartementDetail = () => {
   const { id } = useParams();
   const appartement = appartementsData.find((apt) => apt.id === id);
-
-  const [showDescription, setShowDescription] = useState(false);
-  const [showEquipments, setShowEquipments] = useState(false);
 
   if (!appartement) {
     return <p>Appartement non trouvé</p>;
@@ -18,12 +16,8 @@ const AppartementDetail = () => {
 
   const generateTags = (title, location) => {
     const titleWords = title.split(' ');
-    const firstTag = titleWords[0];
-    const secondTag = titleWords.length > 1 ? titleWords[1] : '';
     const locationWords = location.split(' ');
-    const thirdTag = locationWords[locationWords.length - 1];
-
-    return [firstTag, secondTag, thirdTag];
+    return [titleWords[0], titleWords[1] || '', locationWords[locationWords.length - 1]];
   };
 
   const tags = generateTags(appartement.title, appartement.location);
@@ -60,31 +54,11 @@ const AppartementDetail = () => {
       </div>
 
       <div className="appartement-buttons">
-        <div className="dropdown">
-          <button onClick={() => setShowDescription(!showDescription)}>
-            Description <span>{showDescription ? "▲" : "▼"}</span>
-          </button>
-          {showDescription && (
-            <div className="dropdown-content">
-              <p>{appartement.description}</p>
-            </div>
-          )}
-        </div>
+        {/* Utilisation du composant Collapse pour la description */}
+        <Collapse title="Description" content={appartement.description} buttonClass="detail-button" />
 
-        <div className="dropdown">
-          <button onClick={() => setShowEquipments(!showEquipments)}>
-            Équipements <span>{showEquipments ? "▲" : "▼"}</span>
-          </button>
-          {showEquipments && (
-            <div className="dropdown-content">
-              <ul>
-                {equipmentsList.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
+        {/* Utilisation du composant Collapse pour les équipements */}
+        <Collapse title="Équipements" content={equipmentsList} isList={true} buttonClass="detail-button" />
       </div>
     </div>
   );

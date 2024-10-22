@@ -57,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #F6F6F6;
-  margin-left: 3%;
+  margin-left: 7%;
   border-radius: 25px;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .slogan {
   position: absolute;
-  top: 30%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
@@ -291,10 +291,11 @@ body {
 
 /* Profil de l'hôte */
 .appartement-host {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-direction: column;
 }
 
 .host-profile {
@@ -319,8 +320,6 @@ body {
 
 /* Position absolue pour les étoiles sous le profil */
 .appartement-rating {
-  position: absolute;
-  right: 200px;
   font-size: 20px;
   color: #FF6060;
 }
@@ -391,12 +390,14 @@ body {
     flex-direction: column;
  }
  .appartement-rating {
-  position: absolute;
-  bottom: 0px;
-  left: 20px;
+  
 }
 .appartement-host{
-  margin-left: 60%;
+  flex: 1 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 .appartement-buttons{
   display: flex;
