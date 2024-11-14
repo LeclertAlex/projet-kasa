@@ -40,10 +40,13 @@
  
   /* Style du contenu du collapse */
   .collapse-content {
-    padding: 10px; /* Espacement intérieur */
-    background-color: #FFFFFF; /* Couleur de fond du contenu */
-    border-radius: 5px; /* Bords arrondis */
-    transition: max-height 0.3s ease-in-out; /* Transition pour l'ouverture/fermeture */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out; /* Transition d'ouverture */
+  }
+  
+  .collapse-content.open {
+    max-height: 500px; /* Utilise une valeur suffisante pour contenir le contenu complet */
   }
  
   /* Styles pour la section des boutons (remplacée par Collapse) */
@@ -81,3 +84,5 @@
     align-items: center; /* Aligne verticalement les éléments */
     margin: 20px 0; /* Espacement vertical */
   }
+
+  

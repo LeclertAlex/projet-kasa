@@ -4,14 +4,16 @@ import appartementsData from '../data/appartements.json'; // Données des appart
 import equipmentsList from '../data/equipments'; // Liste des équipements
 import Slideshow from './Slideshow'; // Slideshow des images
 import Collapse from './Collapse'; // Import du composant Collapse
+import {  Navigate  } from 'react-router-dom';
 import '../App.css';
 
 const AppartementDetail = () => {
   const { id } = useParams();
   const appartement = appartementsData.find((apt) => apt.id === id);
 
+
   if (!appartement) {
-    return <p>Appartement non trouvé</p>;
+    return < Navigate  to="/404" />;
   }
 
   const generateTags = (title, location) => {

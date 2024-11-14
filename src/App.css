@@ -76,7 +76,7 @@ body {
 
 .slogan {
   position: absolute;
-  top: 22%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
@@ -163,6 +163,7 @@ body {
     position: relative;
     visibility: visible;
     margin-bottom: -40px;
+    margin-top: 60px;
   }
 
   .slogan::after {
@@ -389,9 +390,6 @@ body {
     display: flex;
     flex-direction: column;
  }
- .appartement-rating {
-  
-}
 .appartement-host{
   flex: 1 1;
   display: flex;
@@ -540,3 +538,5 @@ body {
     margin-bottom: 40%;
   }
 }
+
+
